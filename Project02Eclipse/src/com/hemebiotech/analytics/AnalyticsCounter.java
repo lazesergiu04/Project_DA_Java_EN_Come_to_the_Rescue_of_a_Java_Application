@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class AnalyticsCounter {
 	/**
@@ -46,6 +47,14 @@ public class AnalyticsCounter {
 		return new ReadSymptomDataFromFile(file).getSymptoms();
 	}
 
+	/**
+	 * Method to sort the symptoms alphabetically
+	 *
+	 * @return
+	 */
+	public Map<String, Integer> sortedByName(){
+		return new TreeMap<>(map);
+	}
 
 
 }
