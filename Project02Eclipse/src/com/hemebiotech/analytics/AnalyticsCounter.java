@@ -35,5 +35,17 @@ public class AnalyticsCounter {
 		}
 	}
 
+	/**
+	 * Method reads symptoms from
+	 * the file, using ReadSymptomsDataFromFile class
+	 *
+	 * @param file
+	 * @return symptoms form the file
+	 */
+	public List<String> readSymptoms(String file){
+		return new ReadSymptomDataFromFile(file).getSymptoms();
+	}
+
+
 
 }
