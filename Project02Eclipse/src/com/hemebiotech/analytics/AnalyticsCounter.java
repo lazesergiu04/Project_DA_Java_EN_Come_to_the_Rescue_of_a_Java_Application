@@ -56,5 +56,16 @@ public class AnalyticsCounter {
 		return new TreeMap<>(map);
 	}
 
+	/**Method that writes data in the file
+	 * using WriteDataInFile class and
+	 * sort the symptoms alphabetically
+	 *
+	 *
+	 * @param file
+	 */
+	public void dataInFile(String file) {
+		WriteDataInFile writeDataInFile = new WriteDataInFile();
+		writeDataInFile.write(file, sortedByName());
+	}
 
 }
